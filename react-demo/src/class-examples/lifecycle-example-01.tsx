@@ -28,7 +28,7 @@ export default class Example extends Component {
     return null;
   }
   render() {
-    console.log("render");
+    console.log("render", this);
     const { count } = this.state;
     return (
       <div>

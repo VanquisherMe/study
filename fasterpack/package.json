@@ -1,0 +1,9 @@
+{
+  "name": "fasterpack",
+  "version": "1.0.0",
+  "main": "bin/fasterpack.js",
+  "license": "MIT",
+  "bin": {
+    "fasterpack": "./bin/fasterpack.js"
+  }
+}

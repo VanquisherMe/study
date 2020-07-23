@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function createObject(o) {
+        // 创建临时类
+        function f() {}
+        // 修改类的原型为o, 于是f的实例都将继承o上的方法
+        f.prototype = o;
+        return new f();
+      }
+      console.log("=======================================");
+      var supperObj = {
+        key1: "value",
+        func: function () {
+          console.log(this.key1);
+        },
+      };
+
+      function Factory(obj) {
+        function F() {}
+        F.prototype = obj;
+        return new F();
+      }
+
+      //实际使用方法
+      //var Instance = new Factory(supperObj);
+      var Instance = Factory(supperObj);
+      Instance.func();
+      console.log(Instance);
+    </script>
+  </body>
+</html>

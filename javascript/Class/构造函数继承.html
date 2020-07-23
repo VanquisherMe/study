@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function GithubUser(username, password) {
+        let _password = password;
+        this.username = username;
+        GithubUser.prototype.login = function () {
+          console.log(this.username + "要登录Github，密码是" + _password);
+        };
+      }
+
+      function JuejinUser(username, password) {
+        GithubUser.call(this, username, password);
+        this.articles = 3; // 文章数量
+      }
+
+      const juejinUser1 = new JuejinUser("ulivz", "xxx");
+      console.log(juejinUser1.username); // ulivz
+      console.log(juejinUser1.username); // xxx
+      console.log(juejinUser1.login()); // TypeError: juejinUser1.login is not a function
+    </script>
+  </body>
+</html>

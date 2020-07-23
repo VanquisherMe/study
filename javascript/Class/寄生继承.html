@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var juejinUserSample = {
+        username: "ulivz",
+        password: "xxx",
+      };
+
+      function JuejinUser(obj) {
+        var o = Object.create(obj);
+        o.readArticle = function () {
+          console.log("Read article");
+        };
+        console.log(o);
+        return o;
+      }
+
+      var myComputer = new JuejinUser(juejinUserSample);
+      console.log(myComputer.username);
+      console.log("=======================================");
+      var supperObj = {
+        key1: "value",
+        func: function () {
+          console.log(this.key1);
+        },
+      };
+      function inheritPrototype(obj, value) {
+        //var subObj = Factory(obj);
+        var subObj = Object.create(obj);
+        subObj.name = value;
+        subObj.say = function () {
+          console.log(this.name);
+        };
+        return subObj;
+      }
+
+      var Instance = inheritPrototype(supperObj, "sub");
+      Instance.func();
+      Instance.say();
+    </script>
+  </body>
+</html>

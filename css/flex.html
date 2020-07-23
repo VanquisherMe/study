@@ -1,0 +1,143 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="demo demo1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="demo demo2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+    <div class="demo demo3">
+      <div>
+        1asdasdasdasd asda
+      </div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div style="height: 100px;">7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+    <div class="demo demo4">
+      <div>
+        1asdasdasdasd asda
+      </div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div style="height: 100px;">7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+    </div>
+
+    <div class="demo demo5">
+      <div>
+        1
+      </div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <!--   <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div>
+      <div>9</div> -->
+    </div>
+    <style>
+      .demo1 {
+        display: flex;
+      }
+      .demo1 div {
+        background-color: aqua;
+        flex: 1;
+        margin: 10px;
+      }
+
+      .demo2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .demo2 div {
+        background-color: aqua;
+        width: 100px;
+        margin: 10px;
+      }
+
+      .demo3 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        height: 300px;
+        border: 1px solid;
+      }
+      .demo3 div {
+        background-color: aqua;
+        width: 100px;
+        margin: 10px;
+      }
+
+      .demo4 {
+        display: flex;
+        flex-wrap: wrap;
+        height: 300px;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: stretch;
+        border: 1px solid;
+      }
+      .demo4 div {
+        background-color: rgb(52, 37, 190);
+        width: 100px;
+        margin: 10px;
+      }
+
+      .demo5 {
+        display: flex;
+        flex-wrap: wrap;
+        height: 300px;
+        border: 1px solid;
+      }
+      .demo5 div:nth-child(odd) {
+        background-color: rgb(52, 37, 190);
+        width: 100px;
+        margin: 10px;
+        flex-grow: 2;
+      }
+      .demo5 div:nth-child(even) {
+        background-color: rgb(190, 37, 190);
+        width: 100px;
+        margin: 10px;
+        flex-grow: 1;
+      }
+    </style>
+  </body>
+</html>

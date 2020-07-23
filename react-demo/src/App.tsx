@@ -12,6 +12,11 @@ import UseMemoExample01 from "./hooks-examples/UseMemo-Example-01";
 import UseMemoExample02 from "./hooks-examples/UseMemo-Example-02";
 import UseCallbackExample01 from "./hooks-examples/UseCallback-Example-01";
 import LifecycleExample01 from "./class-examples/lifecycle-example-01";
+import CreateElementExample01 from "./class-examples/createElement-example-01";
+import ForceUpdateElementExample01 from "./class-examples/forceUpdate-example-01";
+import GetSnapshotBeforeUpdateExample01 from "./class-examples/getSnapshotBeforeUpdate-example-01";
+import CreateFactoryExample01 from "./class-examples/createFactory-example-01";
+import ChildrenExample01 from "./class-examples/children-example-01";
 import SymbolExample from "./es6-examples/Symbol-example";
 
 import styles from "./App.module.less";
@@ -74,6 +79,21 @@ const App: FC = () => (
           <Switch>
             <Route exact path="/class/lifecycle-01">
               <LifecycleExample01 />
+            </Route>
+            <Route exact path="/class/createElement-01">
+              <CreateElementExample01 />
+            </Route>
+            <Route exact path="/class/forceUpdate-example-01">
+              <ForceUpdateElementExample01 />
+            </Route>
+            <Route exact path="/class/getSnapshotBeforeUpdate-example-01">
+              <GetSnapshotBeforeUpdateExample01 />
+            </Route>
+            <Route exact path="/class/createFactory-example-01">
+              <CreateFactoryExample01 />
+            </Route>
+            <Route exact path="/class/children-example-01">
+              <ChildrenExample01 />
             </Route>
           </Switch>
         </Route>

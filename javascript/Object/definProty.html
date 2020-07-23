@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {};
+      Object.defineProperty(obj, "b", {
+        configurable: true,
+        writable: true,
+        value: "hello",
+      });
+      obj.b = "你好";
+      console.log(obj);
+    </script>
+  </body>
+</html>

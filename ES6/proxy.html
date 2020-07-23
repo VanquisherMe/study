@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        a: { a1: 2 },
+        b: "hello",
+      };
+      const o = new Proxy(obj, {
+        get(t, a) {
+          return t[a];
+        },
+        set(t, a, v) {
+          t[a] = v;
+        },
+      });
+    </script>
+  </body>
+</html>

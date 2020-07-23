@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let s1 = Symbol("foo");
+      let s2 = Symbol("foo");
+
+      console.log(s1);
+      console.log(s2);
+      console.log(s1 == s2);
+      console.log(s1.toString(), s2.toString());
+      console.log(s1.toString() == s2.toString());
+      console.log('{[s1]:"a",[s2]:"b"} :>> ', { [s1]: "a", [s2]: "b" });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    Promise
+    <script>
+      let p1 = new Promise(function (resolve, reject) {
+        /* if (true) {
+          resolve();
+        } else {
+          reject();
+        } */
+
+        setTimeout(() => {
+          resolve();
+        }, 3000);
+        // reject();
+      });
+      console.log(p1);
+      p1.then(() => {
+        console.log(1);
+      });
+      p1.then(() => {
+        console.log(2);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function GithubUser(username, password) {
+        let _password = password;
+        this.username = username;
+        GithubUser.prototype.login = function () {
+          console.log(this.username + "要登录Github，密码是" + _password);
+        };
+      }
+
+      function JuejinUser(username, password) {
+        GithubUser.call(this, username, password); // 第二次执行 GithubUser 的构造函数
+        this.articles = 3; // 文章数量
+      }
+
+      JuejinUser.prototype = new GithubUser(); // 第二次执行 GithubUser 的构造函数
+      const juejinUser1 = new JuejinUser("ulivz", "xxx");
+      juejinUser1.login();
+    </script>
+  </body>
+</html>

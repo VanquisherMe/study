@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function GithubUser(username, password) {
+        let _password = password;
+        this.username = username;
+        GithubUser.prototype.login = function () {
+          console.log(this.username + "要登录Github，密码是" + _password);
+        };
+      }
+
+      function JuejinUser(username, password) {
+        this.articles = 3; // 文章数量
+        const prototype = new GithubUser(username, password);
+        // JuejinUser.prototype = prototype // 这一行已经没有意义了
+        prototype.readArticle = function () {
+          console.log("Read article");
+        };
+        this.__proto__ = prototype;
+      }
+
+      const juejinUser1 = new JuejinUser("ulivz", "xxx", 3);
+      console.log(juejinUser1);
+
+      juejinUser1.login();
+      juejinUser1.readArticle();
+
+      console.log("=======================================");
+      function SupperClass(value) {
+        this.value = value;
+        this.fn = function () {
+          console.log(this.value);
+        };
+      }
+      SupperClass.prototype.otherValue = "other value";
+      //声明父类
+
+      function SubClass(value) {
+        this.subValue = value;
+      }
+      SubClass.prototype = new SupperClass("I'm supper value");
+      //声明子类，并使得子类继承自SupperClass
+      //以上为声明阶段
+
+      //通过以下方式使用
+      var Instance = new SubClass("I'm sub value");
+      console.log(Instance);
+      console.log(Instance.value);
+      console.log(Instance.otherValue);
+      console.log(Instance.subValue);
+      Instance.fn();
+    </script>
+  </body>
+</html>
